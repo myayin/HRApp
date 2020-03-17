@@ -1,23 +1,25 @@
-package com.example.HRApp.Service;
+package com.example.HRApp.service;
 
 
-import com.example.HRApp.Repository.ApplicantRepository;
-import com.example.HRApp.Repository.JobRepository;
+import com.example.HRApp.entity.Authority;
+import com.example.HRApp.repository.ApplicantRepository;
+import com.example.HRApp.repository.AuthorityRepository;
+import com.example.HRApp.repository.JobRepository;
 import com.example.HRApp.entity.Applicant;
-import com.example.HRApp.entity.Job;
-import com.example.HRApp.lib.dto.JobDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestParam;
 
 @Service
 public class ApplicantService {
+
     @Autowired
     private JobRepository jobRepository;
 
     @Autowired
     private ApplicantRepository applicantRepository;
+
+    @Autowired
+    private AuthorityService authorityService;
 
     public String applyJob(Applicant applicant,
                            String jobTitle) {
@@ -25,11 +27,14 @@ public class ApplicantService {
             throw new RuntimeException("please adjust job title, they must be unique");
         } else {
             String jobId = jobRepository.findByJobTitle(jobTitle).get(0).getIdentifier();
-           if(jobId==null){
-               throw new RuntimeException("The job is not found");
-           }
+            if (jobId == null) {
+                throw new RuntimeException("The job is not found");
+            }
             applicant.setJobId(jobId);
             applicantRepository.save(applicant);
+            String applicantId = applicant.getJobId();
+            authorityService.addAuthorityToApplicant(applicantId);
+
 
         }
 

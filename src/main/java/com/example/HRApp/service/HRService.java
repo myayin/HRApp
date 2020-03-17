@@ -1,16 +1,15 @@
-package com.example.HRApp.Service;
+package com.example.HRApp.service;
 
 
-import com.example.HRApp.Mapper.ApplicantMapper;
-import com.example.HRApp.Repository.ApplicantRepository;
-import com.example.HRApp.Repository.JobRepository;
+import com.example.HRApp.mapper.ApplicantMapper;
+import com.example.HRApp.repository.ApplicantRepository;
+import com.example.HRApp.repository.JobRepository;
 import com.example.HRApp.entity.Applicant;
 import com.example.HRApp.entity.Job;
 
 import com.example.HRApp.lib.resource.ApplicantResource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.ArrayList;
 import java.util.List;

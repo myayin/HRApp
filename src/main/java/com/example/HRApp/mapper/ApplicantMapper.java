@@ -1,4 +1,4 @@
-package com.example.HRApp.Mapper;
+package com.example.HRApp.mapper;
 
 import com.example.HRApp.entity.Applicant;
 import com.example.HRApp.lib.dto.ApplicantDto;

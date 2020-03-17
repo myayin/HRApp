@@ -20,4 +20,16 @@ public class Authority {
     @GenericGenerator(name = "system-uuid", strategy = "uuid2")
     @Column(name = "id", length = ID_LENGTH)
     private String identifier;
+
+    @Column(name="user_id")
+    private String userId;
+
+    @Column(name="role")
+    private String role;
+
+    public Authority(String userId, String role){
+        this.userId = userId;
+        this.role = role;
+    }
+
 }

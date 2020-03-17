@@ -1,4 +1,4 @@
-package com.example.HRApp.Repository;
+package com.example.HRApp.repository;
 
 import com.example.HRApp.entity.Applicant;
 
@@ -8,7 +8,8 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface ApplicantRepository extends JpaRepository<Applicant,String> {
+public interface ApplicantRepository extends JpaRepository<Applicant, String> {
     @Override
     List<Applicant> findAll();
+
 }

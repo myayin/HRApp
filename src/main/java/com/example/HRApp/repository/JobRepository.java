@@ -1,4 +1,4 @@
-package com.example.HRApp.Repository;
+package com.example.HRApp.repository;
 
 
 import com.example.HRApp.entity.Job;

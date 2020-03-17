@@ -1,8 +1,8 @@
-package com.example.HRApp.Controler;
+package com.example.HRApp.controler;
 
 
-import com.example.HRApp.Mapper.JobMapper;
-import com.example.HRApp.Service.HRService;
+import com.example.HRApp.mapper.JobMapper;
+import com.example.HRApp.service.HRService;
 import com.example.HRApp.lib.dto.JobDto;
 import com.example.HRApp.lib.resource.ApplicantResource;
 import org.springframework.beans.factory.annotation.Autowired;

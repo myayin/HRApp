@@ -1,6 +1,6 @@
-package com.example.HRApp.Controler;
+package com.example.HRApp.controler;
 
-import com.example.HRApp.Service.JobService;
+import com.example.HRApp.service.JobService;
 import com.example.HRApp.lib.resource.JobResource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
