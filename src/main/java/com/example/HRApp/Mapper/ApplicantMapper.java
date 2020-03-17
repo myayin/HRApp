@@ -30,6 +30,9 @@ public class ApplicantMapper {
         ApplicantResource applicantResource = new ApplicantResource();
         applicantResource.setEmail(applicant.getEmail());
         applicantResource.setName(applicant.getName());
+        applicantResource.setPhone(applicant.getPhone());
+        applicantResource.setAddress(applicant.getAddress());
+        applicantResource.setThoughts(applicant.getThoughts());
 
 
 

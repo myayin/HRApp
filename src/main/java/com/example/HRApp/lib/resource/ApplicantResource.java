@@ -5,10 +5,16 @@ import lombok.Data;
 
 @Data
 public class ApplicantResource {
-    @JsonProperty("name")
-    private  String name;
 
-    @JsonProperty("email")
+    private String name;
+
+
     private String email;
+
+    private String phone;
+
+    private String address;
+
+    private String thoughts;
 
 }
