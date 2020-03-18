@@ -19,7 +19,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 @JsonTest
 @RunWith(SpringRunner.class)
 
-class ApplicantControllerTest {
+class ApplicantDtoTest {
 
 	@Autowired
 	private JacksonTester<ApplicantDto> json;
