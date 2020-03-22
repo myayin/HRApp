@@ -9,6 +9,6 @@ export class AppComponent {
   title : string;
 
   constructor() {
-    this.title = "KOD GEMİSİ KARİYER";
+    this.title = "KOD GEMİSİ CAREER PAGE" ;
   }
 }

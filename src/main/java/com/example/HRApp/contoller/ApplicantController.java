@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping(value = {"/applicant"})
 public class ApplicantController {
 
@@ -16,7 +17,7 @@ public class ApplicantController {
 
     @PostMapping("/apply-to-job")
     public void applyJob(@RequestBody ApplicantDto applicantDto,
-                           @RequestParam("job-title") String jobTitle) {
+                           @RequestParam("jobTitle") String jobTitle) {
 
         applicantService.applyJob(ApplicantMapper.toEntity(applicantDto), jobTitle);
     }

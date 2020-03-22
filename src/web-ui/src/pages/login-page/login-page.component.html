@@ -19,7 +19,7 @@
                name="password"
                placeholder="Enter your password"
                required #email="ngModel">
-        <div [hidden]="!email.pristine" class="alert alert-danger">Email is required</div>
+        <div [hidden]="!email.pristine" class="alert alert-danger">Password is required</div>
       </div>
       <button type="submit" [disabled]="!userForm.form.valid"
               class="btn btn-info">Submit</button>
