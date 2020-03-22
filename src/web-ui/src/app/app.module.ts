@@ -18,10 +18,6 @@ import { ApplyToJobComponent } from '../pages/apply-to-job/apply-to-job.componen
 import { ResultPageComponent } from '../pages/result-page/result-page.component';
 import {ApplicantService} from "../service/applicant.service";
 import { LoginPageComponent } from '../pages/login-page/login-page.component';
-import {JwtInterceptor} from "../lib/security/jwt.interceptor";
-import {AuthenticationService} from "../lib/security/authentication.service";
-import {AuthGuard} from "../lib/security/auth.guard";
-import {ErrorInterceptor} from "../lib/security/authentication.interceptor";
 import { AdminPageComponent } from '../admin-pages/admin-page/admin-page.component';
 import {LoginService} from "../service/login.service";
 import {GetJobAdminComponent} from "../admin-pages/get-job-admin/get-job-admin.component";
@@ -60,8 +56,6 @@ import { DeleteJobComponent } from '../admin-pages/delete-job/delete-job.compone
   ],
   providers: [JobServiceService,
     ApplicantService,
-    AuthenticationService,
-    AuthGuard,
     LoginService,
     HrService,
   ],
