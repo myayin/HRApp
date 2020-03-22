@@ -2,8 +2,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { JobResource } from '../resource/job-resource';
-import { Observable } from 'rxjs/Observable';
-import {HttpParams} from "@angular/common/http";
 import {LoginRequestDto} from "../dto/login-request-dto";
 
 @Injectable()
