@@ -16,6 +16,7 @@ public class JobMapper {
         job.setApplicationDate(jobDto.getApplicationDate());
         job.setJobTitle(jobDto.getJobTitle());
         job.setNumberOfPeople(jobDto.getNumberOfPeople());
+        job.setJobDescription(jobDto.getJobDescription());
 
 
         return job;
@@ -27,10 +28,11 @@ public class JobMapper {
         }
 
         JobResource jobResource = new JobResource();
-        jobResource.setApplicationDate(job.getApplicationDate());
+
         jobResource.setJobTitle(job.getJobTitle());
         jobResource.setNumberOfPeople(job.getNumberOfPeople());
-
+        jobResource.setJobDescription(job.getJobDescription());
+        jobResource.setApplicationDate(job.getApplicationDate());
         return jobResource;
     }
 }

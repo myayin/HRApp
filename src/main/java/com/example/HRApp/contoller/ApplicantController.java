@@ -1,4 +1,4 @@
-package com.example.HRApp.controler;
+package com.example.HRApp.contoller;
 
 import com.example.HRApp.mapper.ApplicantMapper;
 import com.example.HRApp.service.ApplicantService;
@@ -15,10 +15,10 @@ public class ApplicantController {
 
 
     @PostMapping("/apply-to-job")
-    public String applyJob(@RequestBody ApplicantDto applicantDto,
+    public void applyJob(@RequestBody ApplicantDto applicantDto,
                            @RequestParam("job-title") String jobTitle) {
 
-        return applicantService.applyJob(ApplicantMapper.toEntity(applicantDto), jobTitle);
+        applicantService.applyJob(ApplicantMapper.toEntity(applicantDto), jobTitle);
     }
 
 }

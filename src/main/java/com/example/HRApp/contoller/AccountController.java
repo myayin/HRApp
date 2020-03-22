@@ -1,4 +1,4 @@
-package com.example.HRApp.controler;
+package com.example.HRApp.contoller;
 
 
 import com.example.HRApp.entity.HR;
@@ -6,7 +6,6 @@ import com.example.HRApp.lib.dto.LoginRequestDto;
 import com.example.HRApp.lib.resource.TokenResponse;
 import com.example.HRApp.repository.HRRepository;
 import com.example.HRApp.security.JwtTokenUtil;
-import com.example.HRApp.service.HRService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -15,8 +14,8 @@ import org.springframework.security.core.AuthenticationException;
 import org.springframework.web.bind.annotation.*;
 
 
-@CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
+@CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping("/token")
 public class AccountController {
 
@@ -28,10 +27,6 @@ public class AccountController {
 
     @Autowired
     private HRRepository userRepository;
-
-    @Autowired
-    private HRService hrService;
-
 
 
     @RequestMapping(value = "login",method = RequestMethod.POST)

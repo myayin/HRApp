@@ -38,7 +38,7 @@ public class Applicant {
     private String email;
 
     @NotNull
-    @Column(name = "addres")
+    @Column(name = "address")
     private String address;
 
 

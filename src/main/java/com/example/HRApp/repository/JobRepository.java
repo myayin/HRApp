@@ -11,5 +11,7 @@ import java.util.List;
 public interface JobRepository extends JpaRepository<Job,String> {
    List<Job> findByJobTitle(String jobTitle);
    List <Job> findAll();
+   String findIdByJobTitle(String jobTitle);
+
 
 }

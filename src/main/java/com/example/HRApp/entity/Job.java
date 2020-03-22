@@ -5,6 +5,7 @@ import lombok.ToString;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.sql.Date;
 
 import static com.example.HRApp.constants.SetUpConstants.ID_LENGTH;
@@ -24,12 +25,16 @@ public class Job {
     @Column(name = "job_title")
     private  String jobTitle;
 
+    @Column(name = "job_description")
+    private  String jobDescription;
+
     @Column(name = "number_people")
-    private int numberOfPeople;
+    private String numberOfPeople;
 
    @Column(name = "application_date")
     private Date applicationDate;
 
+   @NotNull
    @Column(name = "isActive")
     private Boolean isActive=true;
 

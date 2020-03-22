@@ -1,19 +1,26 @@
 package com.example.HRApp.lib.resource;
 
+
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 import java.sql.Date;
-import java.sql.Timestamp;
+
 
 @Data
 public class JobResource {
 
+    @JsonProperty("jobTitle")
     private  String jobTitle;
 
-    private String phone;
+    @JsonProperty("jobDescription")
+    private String jobDescription;
 
-    private int numberOfPeople;
+    @JsonProperty("numberOfPeople")
+    private String numberOfPeople;
 
+    @JsonProperty("applicationDate")
     private Date applicationDate;
+
+
 }
