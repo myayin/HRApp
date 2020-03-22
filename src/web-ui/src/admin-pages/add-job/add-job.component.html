@@ -1,0 +1,45 @@
+
+<div class="card my-5">
+  <div class="card-body">
+    <form (ngSubmit)="onSubmit()" #userForm="ngForm">
+      <div class="form-group">
+        <label for="jobTitle">Job Title</label><br>
+        <input type="text" [(ngModel)]="jobDto.jobTitle"
+               class="form-control"
+               id="jobTitle"
+               name="jobTitle"
+               placeholder="Enter job title"
+               required #name="ngModel">
+
+        <label for="jobDescription">Job Description</label><br>
+        <input type="text" [(ngModel)]="jobDto.jobDescription"
+               class="form-control"
+               id="jobDescription"
+               name="jobDescription"
+               placeholder="Enter Job Description"
+               required #name="ngModel">
+
+
+        <label for="applicationDate">Last Application Date</label><br>
+        <input type="text" [(ngModel)]="jobDto.applicationDate"
+               class="form-control"
+               id="applicationDate"
+               name="applicationDate"
+               placeholder="Enter application date"
+               required #name="ngModel">
+
+        <label for="numberOfPeople">Number of People for hire</label><br>
+        <input type="text" [(ngModel)]="jobDto.numberOfPeople"
+               class="form-control"
+               id="numberOfPeople"
+               name="numberOfPeople"
+               placeholder="Enter number of people for hire"
+               required #name="ngModel">
+
+
+      </div>
+      <button type="submit" [disabled]="!userForm.form.valid"
+              class="btn btn-info">Submit</button>
+    </form>
+  </div>
+</div>
